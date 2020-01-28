@@ -1,0 +1,35 @@
+<!DOCTYPE>
+<html ng-app="ProductBuyer">
+    <head>
+        <title>Product Shopping  App</title>
+
+        <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css"  href="node_modules/angularjs-toaster/toaster.min.css">
+        <link rel="stylesheet" href="node_modules/angular-material/angular-material.css">
+       
+        
+    </head>
+    <body>
+        <div class="container">
+            <h1> <b> Product Shopping App </b></h1>
+
+            <div ng-view></div>
+        </div>
+
+        <toaster-container></toaster-container>
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script src="node_modules/angular/angular.js"></script>
+        <script src="node_modules/angular-route/angular-route.js"></script>
+        <script src="node_modules/angular-animate/angular-animate.js"></script>
+        <script src="node_modules/angular-aria/angular-aria.js"></script> 
+        <script src="node_modules/angular-material/angular-material.js"></script> 
+        <script src="node_modules/angularjs-toaster/toaster.js"></script>
+        <script src="app.js"></script>
+        <script src="services/ProductBuyerService.js"></script>
+        <script src="controllers/HomeController.js"></script>
+        <script src="controllers/ProductAddController.js"></script>
+        <script src="controllers/ProductDetailsController.js"></script>
+        <script src="controllers/ProductEditController.js"></script>
+        <script src="controllers/ProductRemoveController.js"></script>
+    </body>
+</html>

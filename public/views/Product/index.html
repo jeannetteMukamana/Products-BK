@@ -1,0 +1,66 @@
+<p>
+    <a ng-click="vm.add()">Add new</a>
+</p>
+
+<div class="container">
+    <div class="row">
+        <div class="form-inline">
+            <div class="form-group">
+                <input type="text" name="brandName" class="form-control" placeholder="brandName"
+                    ng-model="vm.search.brandName" />
+            </div>
+
+            <div class="form-group">
+                <input type="text" name="model" class="form-control" placeholder="model" ng-model="vm.search.model" />
+            </div>
+
+            <div class="form-group">
+                <input type="text" name="price" class="form-control" placeholder="price" ng-model="vm.search.price" />
+            </div>
+            <div class="form-group">
+                <input type="text" name="size" class="form-control" placeholder="size" ng-model="vm.search.size" />
+            </div>
+            <div class="form-group">
+                <select name="MaxNumber" class="form-control list-box" ng-model="vm.search.MaxNumber">
+                    <option value="10" selected="selected">10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <button type="button" class="btn btn-primary glyphicon glyphicon-search" ng-click="vm.search();" />
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+
+
+<div ng-cloak layout-gt-sm="row" layout="column" style="width:2000px">
+    <div flex-gt-sm="50" flex>
+        <md-toolbar layout="row" class="md-hue-3">
+            <div class="md-toolbar-tools">
+                <span>Latest Products</span>
+            </div>
+        </md-toolbar>
+        <md-content>
+            <md-list flex>
+                <md-list-item class="md-3-line" ng-repeat="Product in vm.Products  | orderBy : 'manufactureDate'"
+                    ng-click="vm.details(Product._id)">
+                    <img ng-src="images/Product.png" class="md-avatar md-34" alt="{{Product.brandName}}" />
+                    <div class="md-list-item-text" layout="column">
+                        <h3> Brandand Name: {{ Product.brandName }}</h3>
+                        <h4> Model: {{Product.model}}</h4>
+                        <p> Price: {{Product.price }}</p>
+                        <p> Manufacture Date: {{ Product.manufactureDate | date:'dd/MM/yyyy' }}</p>
+                    </div>
+                </md-list-item>
+                <md-divider></md-divider>
+                <md-divider></md-divider>
+                <md-divider></md-divider>
+            </md-list>
+        </md-content>
+    </div>
+</div>

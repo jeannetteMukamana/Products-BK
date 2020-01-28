@@ -1,0 +1,27 @@
+<div ng-cloak layout-gt-sm="row" layout="column" style="width:2000px">
+    <div flex-gt-sm="50" flex>
+        <md-toolbar layout="row" class="md-hue-3">
+            <div class="md-toolbar-tools">
+                <span>Product Details</span>
+            </div>
+        </md-toolbar>
+        <md-content>
+            <md-list flex>
+                <md-list-item class="md-3-line">
+                    <img ng-src="images/Product.png" class="md-avatar md-34" alt="{{Product.brandName}}" />
+                    <div class="md-list-item-text" layout="column">
+                        <h3> <b>Brandand Name: </b> {{ vm.model.brandName }}</h3>
+                        <h3> <b> Model:</b> {{vm.model.model}} </h3>
+                        <h3> <b>Price: </b>{{vm.model.price }} </h3>
+                        <h3> <b>Available size : </b>{{ vm.model.size.size}} </h3>
+                        <h3> <b>Quantiy:</b>{{ vm.model.size.quantity}} </h3>
+                        <h3> <b>Manufacture Date: </b> {{ vm.model.manufactureDate | date:'dd/MM/yyyy'}} </h3>
+                    </div>
+                </md-list-item>
+                <md-divider></md-divider>
+                <md-divider></md-divider>
+                <md-divider></md-divider>
+            </md-list>
+        </md-content>
+    </div>
+</div>
